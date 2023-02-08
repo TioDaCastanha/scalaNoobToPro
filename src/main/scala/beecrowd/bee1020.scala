@@ -4,7 +4,7 @@ import scala.io.StdIn.readLine
 
 object bee1020 extends App {
 
-  val idade: Int = readLine().toInt
+  private val idade: Int = readLine().toInt
 
   converterIdade(idade)
 
