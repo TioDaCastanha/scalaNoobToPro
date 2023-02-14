@@ -33,4 +33,13 @@ val aSetList = Set(1,3,2,1,5,8)
 
 aSetList
 
+//Tuplas
+val aTuple = ("Bob", 20)
 
+aTuple._1
+aTuple._2
+
+val (nome, idade) = aTuple
+
+println(nome)
+println(idade)
