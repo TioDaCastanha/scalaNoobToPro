@@ -18,5 +18,5 @@ class MyMap[Key, Value]{
 }
 
 object MinhaLista{
-  def vazia[A]: MinhaLista[A] = ??? //Metodo Generico
+  def vazia[A]: MinhaLista[A] = new MinhaLista[A] //Metodo Generico
 }

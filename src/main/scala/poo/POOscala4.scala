@@ -12,7 +12,23 @@ abstract class MidiaSocial{
   def eMidia: Boolean
 }
 
-class UsuarioMidia extends MidiaSocial{
+class UsuarioMidia extends MidiaSocial with Idade with Genero { //Classes podem herdar varias Traits
   val facebook = "Não tenho facebook"
+  override val idadeUsoMediaSocial: Int = 12
+  override val genero = "Homem ou Mulher"
   def eMidia = false
+  override def idadeMinimaUso: Int = 10
 }
+
+//Traits são "comportamentos". Tambem pode possuir valores abstratos
+trait Idade {
+  val idadeUsoMediaSocial: Int
+
+  def idadeMinimaUso: Int
+}
+
+trait Genero{
+  val genero:String
+
+}
+
