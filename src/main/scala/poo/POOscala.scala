@@ -17,6 +17,10 @@ object POOscala extends App {
 
   println(bob saiuCom billy) //outro Infix
   println(bob.-())
+  println(bob.apply())
+  println(bob())//Syntactic Sugar
+
+  println((billy - "de Bills")())//Overload com apply
 
   //Operadores matemáticos em Scala são metodos em Infix
   println(1 + 2) //Com Infix
@@ -33,4 +37,9 @@ class Pessoa(val nome: String, val idade: Int) {
 
   //é possivel usar simbolos de operações em nomes de métodos
   def -(): String = s"${this.nome} está sozinho"
+  def -(sobrenome: String) = new Pessoa(s"$nome $sobrenome", 35)
+
+  //Apply -> método sem parametros
+  def apply(): String = s"meu nome é $nome e tenho $idade anos"
+
 }
