@@ -5,6 +5,9 @@ numeros(3) = 100
 
 numeros
 
+val aString = "1 2 3 4"
+val aArray = aString.split(" ").map(_.toInt)
+
 //List -> Imutável, seu conteúdo não pode ser alterado
 val numeros2 = List(1, 1, 2, 3)
 
